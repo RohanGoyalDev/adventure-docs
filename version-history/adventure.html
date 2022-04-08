@@ -1,0 +1,698 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="adventure-platform" href="adventure-platform.html" /><link rel="prev" title="Version History" href="index.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>adventure - Adventure Documentation (v4.10.1)</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  --color-brand-primary: #2f2850;
+  --color-brand-content: #6355aa;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Adventure Documentation (v4.10.1)</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+  
+
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+<span class="sidebar-brand-text">Adventure</span>
+
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-libraries.html">Community Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../audiences.html">Audiences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../text.html">Text (Chat Components)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../serializer/index.html">Text Serializers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/gson.html">Gson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/legacy.html">Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/plain.html">Plain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bossbar.html">Boss Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sound.html">Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title.html">Titles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../book.html">Books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tablist.html">PlayerList/Tablist</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../minimessage/index.html">MiniMessage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../minimessage/format.html">Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../minimessage/api.html">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../platform/index.html">Platforms</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/native.html">Native Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/bukkit.html">Bukkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/bungeecord.html">BungeeCord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/spongeapi.html">SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/fabric.html">Fabric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/viaversion.html">ViaVersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../migration/index.html">Migrating to Adventure from other APIs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../migration/bungeecord-chat-api.html">Migrating from the BungeeCord Chat API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/text-3.x.html">Migrating from text 3.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to the Documentation</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Version History</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">adventure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adventure-platform.html">adventure-platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adventure-platform-fabric.html">adventure-platform-fabric</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The Adventure docs are currently a <strong>work in progress</strong> and supplement the <a class="reference external" href="https://jd.adventure.kyori.net">Javadocs</a>.
+Some areas may have limited coverage or may not be entirely up to date.
+Feel free to join our <a class="reference external" href="https://discord.gg/MMfhJ8F">Discord</a> if you have any questions.</p>
+</div>
+<section id="adventure">
+<h1>adventure<a class="headerlink" href="#adventure" title="Permalink to this headline">#</a></h1>
+<section id="release-v4-10-1">
+<h2>v4.10.1: 🌏 Adventure 4.10.1<a class="headerlink" href="#release-v4-10-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2022-03-07 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.10.1">GitHub</a></em></p>
+<p>This is a minor bugfix release of Adventure to resolve some issues with MiniMessage tag filtering.</p>
+<p>As a small programming note for those of you who test our snapshots, we will be moving from the (moderately overloaded) <code>oss.sonatype.org</code> to the newer <code>s01.oss.sonatype.org</code> for our snapshot repository in the near future. An announcement will be posted on Discord when this migration is complete, and the documentation will be updated.</p>
+<h1>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h1>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/723/hovercard" data-id="1158981003" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/723" href="https://github.com/KyoriPowered/adventure/pull/723">#723</a> - minimessage: Ignore invalid tags when parsing</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/727/hovercard" data-id="1160821960" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/727" href="https://github.com/KyoriPowered/adventure/pull/727">#727</a> - minimessage: Add stacktraces and more details to legacy errors</li>
+</ul></section>
+<section id="release-v4-10-0">
+<h2>v4.10.0: 🌏 Adventure 4.10.0<a class="headerlink" href="#release-v4-10-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2022-02-28 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.10.0">GitHub</a></em></p>
+<p>Adventure 4.10.0 is a feature release of Adventure, providing (at long last!) a stable release of the MiniMessage serialization format, as well as a variety of quality-of-life improvements.</p>
+<p>To get started with <em>MiniMessage</em>, take a look at its documentation: <a href="https://docs.adventure.kyori.net/minimessage/" rel="nofollow">https://docs.adventure.kyori.net/minimessage/</a>, and try it out with the <a href="https://webui.adventure.kyori.net" rel="nofollow">Web UI</a>!</p>
+<p>Thanks to everyone who contributed to making this release happen -- it's been a long time coming!</p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/622/hovercard" data-id="1072898064" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/622" href="https://github.com/KyoriPowered/adventure/pull/622">#622</a> - Merge minimessage</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/490/hovercard" data-id="1040571635" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/490" href="https://github.com/KyoriPowered/adventure/pull/490">#490</a> - api: add TextDecoration#withState and add missing null pointer check</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/449/hovercard" data-id="1002636710" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/449" href="https://github.com/KyoriPowered/adventure/pull/449">#449</a> - api: Rename Title.Times.of</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/444/hovercard" data-id="995330185" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/444" href="https://github.com/KyoriPowered/adventure/pull/444">#444</a> - Add decorations(Map) to component/style builders</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/472/hovercard" data-id="1021159671" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/472" href="https://github.com/KyoriPowered/adventure/pull/472">#472</a> - Add TriState toBoolean helper methods</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/480/hovercard" data-id="1029982472" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/480" href="https://github.com/KyoriPowered/adventure/pull/480">#480</a> - extra-kotlin: Added more extensions and enabled explicit API</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/495/hovercard" data-id="1043939854" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/495" href="https://github.com/KyoriPowered/adventure/pull/495">#495</a> - Add Tristate method to TextDecoration.State</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/482/hovercard" data-id="1034292222" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/482" href="https://github.com/KyoriPowered/adventure/pull/482">#482</a> - Add standard join configurations</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/479/hovercard" data-id="1029376261" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/479" href="https://github.com/KyoriPowered/adventure/pull/479">#479</a> - extra-kotlin: Add some <code>JoinConfiguration</code> related methods</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/501/hovercard" data-id="1059497861" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/501" href="https://github.com/KyoriPowered/adventure/pull/501">#501</a> -  Abstract out style methods to StyleWriter/Reader</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/645/hovercard" data-id="1081717939" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/645" href="https://github.com/KyoriPowered/adventure/pull/645">#645</a> - feat(key): expose a Comparator for Key</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/617/hovercard" data-id="1065627751" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/617" href="https://github.com/KyoriPowered/adventure/pull/617">#617</a> - api: Introduce Component.textOfChildren as a replacement for TextComponent.ofChildren</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/652/hovercard" data-id="1087052125" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/652" href="https://github.com/KyoriPowered/adventure/pull/652">#652</a> - chore: Rename some static constructer methods</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/650/hovercard" data-id="1086280228" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/650" href="https://github.com/KyoriPowered/adventure/pull/650">#650</a> - feat(api): Internal configuration</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/698/hovercard" data-id="1147497521" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/698" href="https://github.com/KyoriPowered/adventure/pull/698">#698</a> - New builder</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/700/hovercard" data-id="1148538415" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/700" href="https://github.com/KyoriPowered/adventure/pull/700">#700</a> - key: make Key extend Namespaced</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/488/hovercard" data-id="1038305457" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/488" href="https://github.com/KyoriPowered/adventure/pull/488">#488</a> - <code>Component::applyFallbackStyle</code> helper method</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/717/hovercard" data-id="1154434615" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/717" href="https://github.com/KyoriPowered/adventure/pull/717">#717</a> - text-minimessage: Limit characters allowed in tag names</li>
+</ul>
+<h2>MiniMessage changes since 4.2.0-SNAPSHOT</h2>
+<p>Because MiniMessage had a fairly extended development process, there have been several notable changes (some breaking) since earlier development phases that may affect any testers of the older API.</p>
+<p>This is just a summary -- see <a href="https://docs.adventure.kyori.net/minimessage/api.html" rel="nofollow">the documentation</a> for a full overview of the latest API.</p>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/635/hovercard" data-id="1077933523" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/635" href="https://github.com/KyoriPowered/adventure/pull/635">#635</a> - text-minimessage: Properly handle colour override depth reductions</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/663/hovercard" data-id="1100587775" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/663" href="https://github.com/KyoriPowered/adventure/pull/663">#663</a> - chore: Remove parse method</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/657/hovercard" data-id="1090762283" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/657" href="https://github.com/KyoriPowered/adventure/pull/657">#657</a> - Introduce a method by which to create raw replacements</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/671/hovercard" data-id="1123775974" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/671" href="https://github.com/KyoriPowered/adventure/pull/671">#671</a> - text-minimessage: Use a Consumer rather than Appendable for debug output</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/672/hovercard" data-id="1125398302" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/672" href="https://github.com/KyoriPowered/adventure/pull/672">#672</a> - minimessage: Unify transformations and placeholders</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/658/hovercard" data-id="1091497538" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/658" href="https://github.com/KyoriPowered/adventure/pull/658">#658</a> - text-minimessage: add deserialization method returning parsed tree</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/681/hovercard" data-id="1136505656" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/681" href="https://github.com/KyoriPowered/adventure/pull/681">#681</a> - fix: Require all input to be non-null</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/682/hovercard" data-id="1136547406" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/682" href="https://github.com/KyoriPowered/adventure/pull/682">#682</a> - minimessage: Add a reset tag via a parser directive</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/687/hovercard" data-id="1144987869" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/687" href="https://github.com/KyoriPowered/adventure/pull/687">#687</a> - Add a new tag for line breaks (<code>&lt;br&gt;</code>)</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/701/hovercard" data-id="1148555690" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/701" href="https://github.com/KyoriPowered/adventure/pull/701">#701</a> - Allow parsing with custom Tag Resolvers</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/703/hovercard" data-id="1148930984" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/703" href="https://github.com/KyoriPowered/adventure/pull/703">#703</a> - Rework the MiniMessage serializer to consolidate behavior into resolvers</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/708/hovercard" data-id="1151075587" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/708" href="https://github.com/KyoriPowered/adventure/pull/708">#708</a> - text-minimessage: Expose the root node type to API</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/707/hovercard" data-id="1151050851" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/707" href="https://github.com/KyoriPowered/adventure/pull/707">#707</a> -  text-minimessage: Allow tags to be closed in one tag</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/662/hovercard" data-id="1099462798" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/662" href="https://github.com/KyoriPowered/adventure/pull/662">#662</a> - Warn when input contains legacy formatting codes (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/515/hovercard" data-id="1065448965" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/515" href="https://github.com/KyoriPowered/adventure/issues/515">#515</a>)</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/674/hovercard" data-id="1128962699" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/674" href="https://github.com/KyoriPowered/adventure/pull/674">#674</a> - Implement TransitionTag</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/485/hovercard" data-id="1034389487" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/485" href="https://github.com/KyoriPowered/adventure/pull/485">#485</a> - Add more non-null value validations</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/451/hovercard" data-id="1002960287" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/451" href="https://github.com/KyoriPowered/adventure/pull/451">#451</a> - api: Add inVersion to all @ApiStatus.ScheduledForRemoval annotations</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/493/hovercard" data-id="1042393455" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/493" href="https://github.com/KyoriPowered/adventure/pull/493">#493</a> - Fix accidental float and double NaN parsing</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/497/hovercard" data-id="1045059156" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/497" href="https://github.com/KyoriPowered/adventure/pull/497">#497</a> - Fix premature SNBT parsing as number</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/498/hovercard" data-id="1046068015" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/498" href="https://github.com/KyoriPowered/adventure/pull/498">#498</a> - Fix unquoted string being parsed as double</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/500/hovercard" data-id="1054209466" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/500" href="https://github.com/KyoriPowered/adventure/pull/500">#500</a> - Fix return type on #decorate method in ScopedComponent</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/481/hovercard" data-id="1031914873" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/481" href="https://github.com/KyoriPowered/adventure/pull/481">#481</a> - fix <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/447/hovercard" data-id="1001296393" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/447" href="https://github.com/KyoriPowered/adventure/issues/447">#447</a> by allowing <code>deserializeOr</code> to return <code>null</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/633/hovercard" data-id="1077725014" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/633" href="https://github.com/KyoriPowered/adventure/pull/633">#633</a> - api: Resolve duplication of children when performing text replacement</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/641/hovercard" data-id="1079609715" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/641" href="https://github.com/KyoriPowered/adventure/pull/641">#641</a> - api: Use initial style when replacement-rendering a hover event</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/647/hovercard" data-id="1083824888" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/647" href="https://github.com/KyoriPowered/adventure/pull/647">#647</a> - util: Add a range check for HSVLike</li>
+</ul>
+<h2>Minor changes</h2>
+<ul>
+<li>Bump JetBrains annotations to 23.0.0</li>
+<li><code>serializer-configurate4</code>: Bump Configurate dependency to 4.1.2</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/474/hovercard" data-id="1021753399" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/474" href="https://github.com/KyoriPowered/adventure/pull/474">#474</a> - Clarify Audience#filterAudience(Predicate) docs</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/642/hovercard" data-id="1079891614" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/642" href="https://github.com/KyoriPowered/adventure/pull/642">#642</a> - Add tests for <code>Title</code> and <code>Title.Times</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/660/hovercard" data-id="1092005369" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/660" href="https://github.com/KyoriPowered/adventure/pull/660">#660</a> -  chore: 2022</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a class="commit-link" href="https://github.com/KyoriPowered/adventure/compare/v4.9.1...v4.10.0"><tt>v4.9.1...v4.10.0</tt></a></p></section>
+<section id="release-v4-9-3">
+<h2>v4.9.3: 🌏 Adventure 4.9.3<a class="headerlink" href="#release-v4-9-3" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-10-31 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.9.3">GitHub</a></em></p>
+<p>This is a small backport of some further issues discovered in the development process of 4.10.0</p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/475/hovercard" data-id="1021786999" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/475" href="https://github.com/KyoriPowered/adventure/pull/475">#475</a> - Fix text decoration parsing</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/477/hovercard" data-id="1027560007" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/477" href="https://github.com/KyoriPowered/adventure/pull/477">#477</a> - Fix titles on 1.8</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/487/hovercard" data-id="1036446754" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/487" href="https://github.com/KyoriPowered/adventure/pull/487">#487</a> - Fix compaction joining text components with children</li>
+</ul></section>
+<section id="release-v4-9-2">
+<h2>v4.9.2: 🌏 Adventure 4.9.2<a class="headerlink" href="#release-v4-9-2" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-10-04 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.9.2">GitHub</a></em></p>
+<p>This is a small backport of some issues discovered in the development process of 4.10.0</p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/463/hovercard" data-id="1014527448" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/463" href="https://github.com/KyoriPowered/adventure/pull/463">#463</a> - fix <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/455/hovercard" data-id="1012694823" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/455" href="https://github.com/KyoriPowered/adventure/issues/455">#455</a> (Component compacting sometimes uses the wrong colour)</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/460/hovercard" data-id="1013987019" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/460" href="https://github.com/KyoriPowered/adventure/pull/460">#460</a> - nbt: Fix reading of explicit int array entries</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/452/hovercard" data-id="1007095181" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/452" href="https://github.com/KyoriPowered/adventure/pull/452">#452</a> - nbt: Fix reading of trailing comma in nbt list/array/compound</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/a92511ca9a49a12b0768556b678d5b486ba3b5dd/hovercard" href="https://github.com/KyoriPowered/adventure/commit/a92511ca9a49a12b0768556b678d5b486ba3b5dd"><tt>a92511c</tt></a> - text-serializer-legacy: Properly copy over flattener when calling toBuilder</li>
+</ul></section>
+<section id="release-v4-9-1">
+<h2>v4.9.1: 🌏 Adventure 4.9.1<a class="headerlink" href="#release-v4-9-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-09-07 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.9.1">GitHub</a></em></p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/439/hovercard" data-id="988664980" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/439" href="https://github.com/KyoriPowered/adventure/pull/439">#439</a> - api: Be more strict about validating nullness of appended components</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/440/hovercard" data-id="988667953" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/440" href="https://github.com/KyoriPowered/adventure/pull/440">#440</a> - api: Don't have redundant overrides of <code>Pointered</code> methods</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/eb867ffbbd1e751ced298235abe51ff52d1dcdfe/hovercard" href="https://github.com/KyoriPowered/adventure/commit/eb867ffbbd1e751ced298235abe51ff52d1dcdfe"><tt>eb867ff</tt></a> - text-serializer-gson: Remove use of recently added Gson method</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/ce69e32f27f58ec276e2d91db1cef7c2c6729423/hovercard" href="https://github.com/KyoriPowered/adventure/commit/ce69e32f27f58ec276e2d91db1cef7c2c6729423"><tt>ce69e32</tt></a> - api: Correct nullabiilty on Pointered.getOrDefault</li>
+</ul></section>
+<section id="release-v4-9-0">
+<h2>v4.9.0: 🌏 Adventure 4.9.0<a class="headerlink" href="#release-v4-9-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-09-05 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.9.0">GitHub</a></em></p>
+<p>Adventure 4.9.0 is a feature release of Adventure, providing new API, some nice performance improvements for the GSON serializer, and a few bug fixes.</p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/365/hovercard" data-id="890691615" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/365" href="https://github.com/KyoriPowered/adventure/pull/365">#365</a> - api: <code>Audience#forEachAudience</code> and <code>Audience#filterAudience</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/339/hovercard" data-id="862798049" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/339" href="https://github.com/KyoriPowered/adventure/pull/339">#339</a> - api: Component iterator</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/344/hovercard" data-id="867718342" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/344" href="https://github.com/KyoriPowered/adventure/pull/344">#344</a> - api: Advanced <code>Component</code> joining</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/373/hovercard" data-id="896013282" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/373" href="https://github.com/KyoriPowered/adventure/pull/373">#373</a> - text-serializer-gson: Migrate remaining serializers to use <code>TypeAdapter</code>s</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/406/hovercard" data-id="922809639" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/406" href="https://github.com/KyoriPowered/adventure/pull/406">#406</a> - api: Add <code>TitlePart</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/426/hovercard" data-id="976785632" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/426" href="https://github.com/KyoriPowered/adventure/pull/426">#426</a> - api: Add <code>Locale</code> pointer</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/404/hovercard" data-id="922760694" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/404" href="https://github.com/KyoriPowered/adventure/pull/404">#404</a> - api: Add <code>Keybind</code> interface</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/308/hovercard" data-id="831020623" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/308" href="https://github.com/KyoriPowered/adventure/pull/308">#308</a> - api: Add support for 'compacting` components</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/430/hovercard" data-id="980501181" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/430" href="https://github.com/KyoriPowered/adventure/pull/430">#430</a> - fix: Check for null supplier</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/421/hovercard" data-id="962950410" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/421" href="https://github.com/KyoriPowered/adventure/pull/421">#421</a> - api: Merge style of full match when replaced</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/407/hovercard" data-id="923346928" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/407" href="https://github.com/KyoriPowered/adventure/pull/407">#407</a> - api: Make sure pointers()is overridden in <code>ForwardingAudience.Single</code></li>
+</ul>
+<h2>Dependency updates</h2>
+<ul>
+<li>Bump <code>examination</code> from 1.1.0 to 1.3.0</li>
+<li>Bump JetBrains annotations to 22.0.0</li>
+<li><code>serializer-configurate3</code>: Bump Configurate dependency to 3.7.2</li>
+<li><code>serializer-configurate4</code>: Bump Configurate dependency to 4.1.1</li>
+</ul></section>
+<section id="release-v4-8-1">
+<h2>v4.8.1: 🌏 Adventure 4.8.1<a class="headerlink" href="#release-v4-8-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-06-12 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.8.1">GitHub</a></em></p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/ad71410be383af40f3191d9b80f91d2ee52f14e7/hovercard" href="https://github.com/KyoriPowered/adventure/commit/ad71410be383af40f3191d9b80f91d2ee52f14e7"><tt>ad71410</tt></a> - api: Don't fail when a decoration state is set</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/403/hovercard" data-id="919650487" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/403" href="https://github.com/KyoriPowered/adventure/pull/403">#403</a> - Link between submodules in the published Javadoc</li>
+</ul></section>
+<section id="release-v4-8-0">
+<h2>v4.8.0: 🌏 Adventure 4.8.0<a class="headerlink" href="#release-v4-8-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-06-07 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.8.0">GitHub</a></em></p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/334/hovercard" data-id="858352612" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/334" href="https://github.com/KyoriPowered/adventure/pull/334">#334</a> - api: Add support for new <code>separator</code> field in Minecraft 1.17</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/390/hovercard" data-id="906483261" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/390" href="https://github.com/KyoriPowered/adventure/pull/390">#390</a> - Migrate from <code>checker-qual</code> to JetBrains annotations</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/328/hovercard" data-id="854409189" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/328" href="https://github.com/KyoriPowered/adventure/pull/328">#328</a> - api: add <code>Sound.Source.Provider</code> interface</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/332/hovercard" data-id="856414077" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/332" href="https://github.com/KyoriPowered/adventure/pull/332">#332</a> - api: Allow passing the replacement <code>MatchResult</code> to continuation predicates</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/327/hovercard" data-id="853807752" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/327" href="https://github.com/KyoriPowered/adventure/pull/327">#327</a> - api: Expose ComponentLike -&gt; Component conversion method</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/371/hovercard" data-id="894379826" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/371" href="https://github.com/KyoriPowered/adventure/pull/371">#371</a> - key: Improve key method javadocs</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/352/hovercard" data-id="875292692" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/352" href="https://github.com/KyoriPowered/adventure/pull/352">#352</a> - api: Add the ability to query an Audience for a value based on a Pointer key</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/393/hovercard" data-id="907044299" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/393" href="https://github.com/KyoriPowered/adventure/pull/393">#393</a> - api: Add Pointer query to Single</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/361/hovercard" data-id="890526938" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/361" href="https://github.com/KyoriPowered/adventure/pull/361">#361</a> - api: Add Translatable interface</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/343/hovercard" data-id="867170225" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/343" href="https://github.com/KyoriPowered/adventure/pull/343">#343</a> - api: Allow platforms to apply implementation hooks when creating <code>ComponentSerializer</code>s</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/379/hovercard" data-id="898957897" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/379" href="https://github.com/KyoriPowered/adventure/pull/379">#379</a> - api: Add ability to unset decorations during component construction</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/329/hovercard" data-id="854421165" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/329" href="https://github.com/KyoriPowered/adventure/pull/329">#329</a> - api: Allow stopping a sound using the original <code>Sound</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/316/hovercard" data-id="842516266" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/316" href="https://github.com/KyoriPowered/adventure/pull/316">#316</a> - api: Add support for playing sound following an "emitter"</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/215/hovercard" data-id="752508851" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/215" href="https://github.com/KyoriPowered/adventure/pull/215">#215</a> - api: Add <code>TextColor.lerp</code> to blend between two colours</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/333/hovercard" data-id="857383476" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/333" href="https://github.com/KyoriPowered/adventure/pull/333">#333</a> - text-serializer-legacy: Properly passthrough invalid RGB codes</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/355/hovercard" data-id="877757680" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/355" href="https://github.com/KyoriPowered/adventure/pull/355">#355</a> - api: Fix typo in deserializeOrNull</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/364/hovercard" data-id="890545240" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/364" href="https://github.com/KyoriPowered/adventure/pull/364">#364</a> - api: Add contains method that allows alternative methods of equality comparison</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/389/hovercard" data-id="906477776" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/389" href="https://github.com/KyoriPowered/adventure/issues/389">#389</a> - api: <code>NamedTextColor</code> examinable properties should include name</li>
+</ul></section>
+<section id="release-v4-7-0">
+<h2>v4.7.0: 🌏 Adventure 4.7.0<a class="headerlink" href="#release-v4-7-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-03-09 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.7.0">GitHub</a></em></p>
+<h2>Deprecations <g-emoji alias="older_adult" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9d3.png">🧓</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/301/hovercard" data-id="822482211" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/301" href="https://github.com/KyoriPowered/adventure/pull/301">#301</a> - api: Mark ScoreComponent's <code>value</code> as deprecated since it is no longer supported as of 1.16</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/307/hovercard" data-id="825066986" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/307" href="https://github.com/KyoriPowered/adventure/pull/307">#307</a> - api: Deprecate Component#detectCycle (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/285/hovercard" data-id="815716165" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/285" href="https://github.com/KyoriPowered/adventure/issues/285">#285</a>)</li>
+</ul>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/259/hovercard" data-id="785250228" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/259" href="https://github.com/KyoriPowered/adventure/pull/259">#259</a> - api: Add <code>contains</code> method to translation registries</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/296/hovercard" data-id="820004923" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/296" href="https://github.com/KyoriPowered/adventure/pull/296">#296</a> - serializer-gson: Add deserializer for JsonElement</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/305/hovercard" data-id="824877278" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/305" href="https://github.com/KyoriPowered/adventure/pull/305">#305</a> - api: Add serializer methods that can process <code>null</code> values (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/221/hovercard" data-id="757789342" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/221" href="https://github.com/KyoriPowered/adventure/issues/221">#221</a>)</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/298/hovercard" data-id="822125123" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/298" href="https://github.com/KyoriPowered/adventure/pull/298">#298</a> - serializer-gson: Add serializer to JsonElement</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/300/hovercard" data-id="822478296" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/300" href="https://github.com/KyoriPowered/adventure/pull/300">#300</a> - api: Nag when somebody does something naughty</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/306/hovercard" data-id="824954687" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/306" href="https://github.com/KyoriPowered/adventure/pull/306">#306</a> - build: Add extra metadata to jar manifests (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/290/hovercard" data-id="817972737" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/290" href="https://github.com/KyoriPowered/adventure/issues/290">#290</a>)</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/302/hovercard" data-id="822676662" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/302" href="https://github.com/KyoriPowered/adventure/pull/302">#302</a> - api: Introduce new concept of a component flattener</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/297/hovercard" data-id="821789241" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/297" href="https://github.com/KyoriPowered/adventure/pull/297">#297</a> - bom: fix missed text-serializer-gson-legacy-impl</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/299/hovercard" data-id="822463514" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/299" href="https://github.com/KyoriPowered/adventure/pull/299">#299</a> - text-serializer-legacy: Tweak reset behavior again</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/304/hovercard" data-id="824168617" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/304" href="https://github.com/KyoriPowered/adventure/pull/304">#304</a> - Fixed typo in documentation in Title</li>
+</ul></section>
+<section id="release-v4-6-0">
+<h2>v4.6.0: 🌏 Adventure 4.6.0<a class="headerlink" href="#release-v4-6-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-03-02 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.6.0">GitHub</a></em></p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/273/hovercard" data-id="800317503" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/273" href="https://github.com/KyoriPowered/adventure/pull/273">#273</a> - feature(nbt): allow merging compound tags via <code>this.put(that)</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/280/hovercard" data-id="810648222" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/280" href="https://github.com/KyoriPowered/adventure/pull/280">#280</a> - api: Add <code>asHSV</code> to <code>RGBLike</code> and use HSV for color comparisons in <code>NamedTextColor.nearestTo</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/283/hovercard" data-id="813323160" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/283" href="https://github.com/KyoriPowered/adventure/pull/283">#283</a> - extra-kotlin</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/284/hovercard" data-id="815323424" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/284" href="https://github.com/KyoriPowered/adventure/pull/284">#284</a> - Added ZLIB compression support for NBT</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/288/hovercard" data-id="817622748" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/288" href="https://github.com/KyoriPowered/adventure/pull/288">#288</a> - api: Add <code>Keyed</code> overloads to hover event types</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/289/hovercard" data-id="817835520" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/289" href="https://github.com/KyoriPowered/adventure/pull/289">#289</a> - api: Add a method to create a TextColor from an HSVLike</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/292/hovercard" data-id="818120015" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/292" href="https://github.com/KyoriPowered/adventure/pull/292">#292</a> - api: Add methods to join components using a collector</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/294/hovercard" data-id="819420634" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/294" href="https://github.com/KyoriPowered/adventure/pull/294">#294</a> - build: Update examination to 1.1.0</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/283/hovercard" data-id="813323160" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/283" href="https://github.com/KyoriPowered/adventure/pull/283">#283</a> - extra-kotlin</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/231/hovercard" data-id="760988612" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/231" href="https://github.com/KyoriPowered/adventure/pull/231">#231</a> - Customize debugger output</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/291/hovercard" data-id="818078896" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/291" href="https://github.com/KyoriPowered/adventure/pull/291">#291</a> -  text-serializer-legacy: Don't insert redundant resets</li>
+</ul></section>
+<section id="release-v4-5-1">
+<h2>v4.5.1: 🌏 Adventure 4.5.1<a class="headerlink" href="#release-v4-5-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-02-23 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.5.1">GitHub</a></em></p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/266/hovercard" href="https://github.com/KyoriPowered/adventure/issues/266">#266</a> -  text-serializer-legacy: <code>StringIndexOutOfBoundsException</code> when parsing malformed hex colors</li>
+<li><a data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/277/hovercard" href="https://github.com/KyoriPowered/adventure/issues/277">#277</a> -  api: <code>TextColor.color(int)</code> / <code>NamedTextColor.ofExact(int)</code> don't ignore the alpha channel</li>
+</ul></section>
+<section id="release-v4-5-0">
+<h2>v4.5.0: 🌏 Adventure 4.5.0<a class="headerlink" href="#release-v4-5-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-02-10 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.5.0">GitHub</a></em></p>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="issue" data-hovercard-url="/KyoriPowered/adventure/issues/278/hovercard" href="https://github.com/KyoriPowered/adventure/issues/278">#278</a> -  nbt: return the empty list tag when trying to create a listtag with an empty list of tags</li>
+</ul></section>
+<section id="release-v4-4-0">
+<h2>v4.4.0: 🌏 Adventure 4.4.0<a class="headerlink" href="#release-v4-4-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2021-01-18 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.4.0">GitHub</a></em></p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/228/hovercard" href="https://github.com/KyoriPowered/adventure/pull/228">#228</a> - Add JetBrains <code>@Contract</code> annotation to some methods</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/240/hovercard" href="https://github.com/KyoriPowered/adventure/pull/240">#240</a> - nbt: Add the ability to add multiple tags to a <code>CompoundBinaryTag</code></li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/241/hovercard" href="https://github.com/KyoriPowered/adventure/pull/241">#241</a> - nbt: Add <code>BinaryTagLike</code> interface</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/dccfc466e9f392fc1bcd08d0ed1c249414c33ae5/hovercard" href="https://github.com/KyoriPowered/adventure/commit/dccfc466e9f392fc1bcd08d0ed1c249414c33ae5"><tt>dccfc46</tt></a> - nbt: Implement <code>toString</code> in binary tags</li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/247/hovercard" data-id="768191855" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/247" href="https://github.com/KyoriPowered/adventure/pull/247">#247</a> - nbt: Add <code>getList</code> methods to <code>ListBinaryTag</code></li>
+<li><a class="issue-link js-issue-link" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/248/hovercard" data-id="768221690" data-permission-text="Title is private" data-url="https://github.com/KyoriPowered/adventure/issues/248" href="https://github.com/KyoriPowered/adventure/pull/248">#248</a> - nbt: Add <code>from(Iterable)</code> and <code>add(Iterable)</code> methods to <code>ListBinaryTag</code></li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/229/hovercard" href="https://github.com/KyoriPowered/adventure/pull/229">#229</a> - api: Expand javadocs (thanks <a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/KingOfSquares/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/KingOfSquares">@KingOfSquares</a>)</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/233/hovercard" href="https://github.com/KyoriPowered/adventure/pull/233">#233</a> - api: Correct handling of children in some text replacements</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/252/hovercard" href="https://github.com/KyoriPowered/adventure/pull/252">#252</a> -  Do not exclude Component#empty from the children of TranslatableComponent</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/257/hovercard" href="https://github.com/KyoriPowered/adventure/pull/257">#257</a> - serializer-gson: Change output ordering to match the order of Vanilla components</li>
+<li><code>nbt</code>: Resolve a security vulnerability that could lead to denial of service when loading specially crafted input</li>
+</ul>
+<h2>Changes <g-emoji alias="wrench" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png">🔧</g-emoji></h2>
+<ul>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/50482cfdf679d464f6e5a1c1f598277c1c10be8b/hovercard" href="https://github.com/KyoriPowered/adventure/commit/50482cfdf679d464f6e5a1c1f598277c1c10be8b"><tt>50482cf</tt></a> nbt: Deprecate usage of <code>listType</code> in <code>ListBinaryTag</code>, introduce <code>elementType</code> instead</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/0a62bb15beede509008da1a49558d3f6f52f3395/hovercard" href="https://github.com/KyoriPowered/adventure/commit/0a62bb15beede509008da1a49558d3f6f52f3395"><tt>0a62bb1</tt></a> - api: Sound.Type extends Keyed</li>
+</ul></section>
+<section id="release-v4-3-0">
+<h2>v4.3.0: 🌏 Adventure 4.3.0<a class="headerlink" href="#release-v4-3-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-12-04 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.3.0">GitHub</a></em></p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/217/hovercard" href="https://github.com/KyoriPowered/adventure/pull/217">#217</a> - text-serializer-gson-legacy-impl</li>
+<li><a class="commit-link" data-hovercard-type="commit" data-hovercard-url="https://github.com/KyoriPowered/adventure/commit/60b2c932574dd0b9a7ddc259f427d5fb43efd6cf/hovercard" href="https://github.com/KyoriPowered/adventure/commit/60b2c932574dd0b9a7ddc259f427d5fb43efd6cf"><tt>60b2c93</tt></a> - api: add ComponentLike methods to BossBar</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/219/hovercard" href="https://github.com/KyoriPowered/adventure/pull/219">#219</a> - api: Player list header/footer support</li>
+</ul></section>
+<section id="release-v4-2-0">
+<h2>v4.2.0: 🌏 Adventure 4.2.0<a class="headerlink" href="#release-v4-2-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-11-25 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.2.0">GitHub</a></em></p>
+<h2>Additions <g-emoji alias="sparkles" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/183/hovercard" href="https://github.com/KyoriPowered/adventure/pull/183">#183</a> - Introduce support for Configurate 4</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/190/hovercard" href="https://github.com/KyoriPowered/adventure/pull/190">#190</a> - nbt: Add array access and stream methods for tags</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/200/hovercard" href="https://github.com/KyoriPowered/adventure/pull/200">#200</a> - api: Add a builder for replacement config</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/211/hovercard" href="https://github.com/KyoriPowered/adventure/pull/211">#211</a> - Add a BOM for version alignment across submodules</li>
+</ul>
+<h2>Fixes <g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji></h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/193/hovercard" href="https://github.com/KyoriPowered/adventure/pull/193">#193</a> - Ignore <code>null</code> values for <code>HoverEvent</code> NBT tag when deserialising using <code>text-serializer-gson</code></li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/196/hovercard" href="https://github.com/KyoriPowered/adventure/issues/196">#196</a> - Properly reset decorations when serialising to legacy format</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/199/hovercard" href="https://github.com/KyoriPowered/adventure/issues/199">#199</a> - api: Fix handling of first replacements in child components</li>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/213/hovercard" href="https://github.com/KyoriPowered/adventure/issues/213">#213</a> - <code>@NonNull</code> contract not being followed when using <code>GsonComponentSerializer</code>to deserilise "null"</li>
+</ul>
+<h2>Changes <g-emoji alias="wrench" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png">🔧</g-emoji></h2>
+<ul>
+<li>Deprecate usage of <code>percent</code> in <code>BossBar</code>, introduce <code>progress</code> instead</li>
+<li>Deprecate old <code>replaceText</code> methods in favour of <code>replaceText</code> methods that use <code>TextReplacementConfig</code></li>
+</ul></section>
+<section id="release-v4-1-1">
+<h2>v4.1.1: 🌏 Adventure 4.1.1<a class="headerlink" href="#release-v4-1-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-10-17 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.1.1">GitHub</a></em></p>
+<h2><g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji> The fixes</h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/185/hovercard" href="https://github.com/KyoriPowered/adventure/pull/185">#185 -  Fix <code>sendMessage</code> overloads on <code>ForwardingAudience</code></a></li>
+</ul></section>
+<section id="release-v4-1-0">
+<h2>v4.1.0: 🌏 Adventure 4.1.0<a class="headerlink" href="#release-v4-1-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-10-16 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.1.0">GitHub</a></em></p>
+<h2><g-emoji alias="cake" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f370.png">🍰</g-emoji> The additions</h2>
+<ul>
+<li><code>sendMessage</code> methods have been added to <code>Audience</code> that use the <code>Identity.nil()</code> identity by default - please make sure you are using the correct methods when sending messages</li>
+</ul></section>
+<section id="release-v4-0-1">
+<h2>v4.0.1: 🌏 Adventure 4.0.1<a class="headerlink" href="#release-v4-0-1" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-10-16 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.0.1">GitHub</a></em></p>
+<h2><g-emoji alias="bug" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji> The fixes</h2>
+<ul>
+<li><a data-hovercard-type="pull_request" data-hovercard-url="/KyoriPowered/adventure/pull/184/hovercard" href="https://github.com/KyoriPowered/adventure/pull/184">#184 -  Fix translatable component rendering bug with nested children</a></li>
+</ul></section>
+<section id="release-v4-0-0">
+<h2>v4.0.0: 🌏 Adventure 4.0.0<a class="headerlink" href="#release-v4-0-0" title="Permalink to this headline">#</a></h2>
+<p><em>Released on 2020-10-14 - <a class="reference external" href="https://github.com/KyoriPowered/adventure/releases/tag/v4.0.0">GitHub</a></em></p>
+<p>Adventure 4.0.0 is a leap forward for the library previously known as Text. Adventure is a cross-platform library that is designed to simplify using <em>Minecraft: Java Edition</em> user-interface elements across all the major platforms. It also adds support for the latest <em>Minecraft: Java Edition</em> version features to ensure you can develop the <em>best</em> adventures your plugin or server possibly can!</p>
+<h2>The shiny new things <g-emoji alias="sparkle" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2747.png">❇️</g-emoji></h2>
+<ul>
+<li>Documentation, available at <a href="https://docs.adventure.kyori.net/" rel="nofollow">https://docs.adventure.kyori.net/</a></li>
+<li>a new <code>Audience</code> framework
+<ul>
+<li>entry point for displaying/sending content (messages, boss bars, titles, sounds) to viewers, such as a player or the server console</li>
+<li>a standard interface for platforms to implement, useful for cross-platform development</li>
+</ul>
+</li>
+<li>ability to create and display a <a href="https://github.com/KyoriPowered/adventure/tree/master/api/src/main/java/net/kyori/adventure/bossbar"><code>BossBar</code></a></li>
+<li>ability to create and display a <a href="https://github.com/KyoriPowered/adventure/tree/master/api/src/main/java/net/kyori/adventure/title"><code>Title</code></a></li>
+<li>ability to play a <a href="https://github.com/KyoriPowered/adventure/tree/master/api/src/main/java/net/kyori/adventure/sound"><code>Sound</code></a></li>
+<li>ability to use the <a href="https://github.com/KyoriPowered/adventure/tree/master/api/src/main/java/net/kyori/adventure/translation"><code>Translator</code></a> framework for using custom "server-side translations" in any <code>Component</code>-based content</li>
+</ul>
+<h2>The refactors <g-emoji alias="wrench" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png">🔧</g-emoji></h2>
+<ul>
+<li>The package has moved from <code>net.kyori.text</code> to <code>net.kyori.adventure.text</code></li>
+<li><code>of</code> and <code>builder</code> methods in <code>Component</code> interfaces have moved to the <code>Component</code> interface - for example:
+<ul>
+<li><code>TextComponent.of("foo")</code> becomes <code>Component.text("foo")</code></li>
+<li><code>TextComponent.builder().content("foo")</code> becomes <code>Component.text().content("foo")</code></li>
+</ul>
+</li>
+<li>RGB colour support via <code>TextColor</code>
+<ul>
+<li>The standard colours, previously in <a href="https://github.com/KyoriPowered/adventure/blob/master/api/src/main/java/net/kyori/adventure/text/format/TextColor.java"><code>TextColor</code></a>, can be found in <a href="https://github.com/KyoriPowered/adventure/blob/master/api/src/main/java/net/kyori/adventure/text/format/NamedTextColor.java"><code>NamedTextColor</code></a></li>
+</ul>
+</li>
+<li>changes to <a href="https://github.com/KyoriPowered/adventure/blob/master/api/src/main/java/net/kyori/adventure/text/event/HoverEvent.java"><code>HoverEvent</code></a> required to support Minecraft 1.16</li>
+</ul>
+<h2>Platform support <g-emoji alias="tokyo_tower" class="g-emoji" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f5fc.png">🗼</g-emoji></h2>
+<ul>
+<li>Bukkit (and forks, such as <a href="https://papermc.io" rel="nofollow">Paper</a> and Spigot) has a <a href="https://github.com/KyoriPowered/adventure-platform">platform adapter</a> available</li>
+<li>BungeeCord has a <a href="https://github.com/KyoriPowered/adventure-platform">platform adapter</a> available</li>
+<li>Fabric has a <a href="https://github.com/KyoriPowered/adventure-platform">platform adapter</a> available</li>
+<li><a href="https://www.spongepowered.org/" rel="nofollow">SpongeAPI</a> 7.x has a <a href="https://github.com/KyoriPowered/adventure-platform">platform adapter</a> available</li>
+<li><a href="https://www.spongepowered.org/" rel="nofollow">SpongeAPI</a> 8.x has <strong>native</strong> Adventure support - <em>no platform adapter is required</em></li>
+<li><a href="https://www.velocitypowered.com/" rel="nofollow">Velocity</a> 1.1.x has <strong>native</strong> Adventure support - <em>no platform adapter is required</em></li>
+</ul></section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="adventure-platform.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">adventure-platform</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Version History</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2021, KyoriPowered
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">adventure</a><ul>
+<li><a class="reference internal" href="#release-v4-10-1">v4.10.1: 🌏 Adventure 4.10.1</a></li>
+<li><a class="reference internal" href="#release-v4-10-0">v4.10.0: 🌏 Adventure 4.10.0</a></li>
+<li><a class="reference internal" href="#release-v4-9-3">v4.9.3: 🌏 Adventure 4.9.3</a></li>
+<li><a class="reference internal" href="#release-v4-9-2">v4.9.2: 🌏 Adventure 4.9.2</a></li>
+<li><a class="reference internal" href="#release-v4-9-1">v4.9.1: 🌏 Adventure 4.9.1</a></li>
+<li><a class="reference internal" href="#release-v4-9-0">v4.9.0: 🌏 Adventure 4.9.0</a></li>
+<li><a class="reference internal" href="#release-v4-8-1">v4.8.1: 🌏 Adventure 4.8.1</a></li>
+<li><a class="reference internal" href="#release-v4-8-0">v4.8.0: 🌏 Adventure 4.8.0</a></li>
+<li><a class="reference internal" href="#release-v4-7-0">v4.7.0: 🌏 Adventure 4.7.0</a></li>
+<li><a class="reference internal" href="#release-v4-6-0">v4.6.0: 🌏 Adventure 4.6.0</a></li>
+<li><a class="reference internal" href="#release-v4-5-1">v4.5.1: 🌏 Adventure 4.5.1</a></li>
+<li><a class="reference internal" href="#release-v4-5-0">v4.5.0: 🌏 Adventure 4.5.0</a></li>
+<li><a class="reference internal" href="#release-v4-4-0">v4.4.0: 🌏 Adventure 4.4.0</a></li>
+<li><a class="reference internal" href="#release-v4-3-0">v4.3.0: 🌏 Adventure 4.3.0</a></li>
+<li><a class="reference internal" href="#release-v4-2-0">v4.2.0: 🌏 Adventure 4.2.0</a></li>
+<li><a class="reference internal" href="#release-v4-1-1">v4.1.1: 🌏 Adventure 4.1.1</a></li>
+<li><a class="reference internal" href="#release-v4-1-0">v4.1.0: 🌏 Adventure 4.1.0</a></li>
+<li><a class="reference internal" href="#release-v4-0-1">v4.0.1: 🌏 Adventure 4.0.1</a></li>
+<li><a class="reference internal" href="#release-v4-0-0">v4.0.0: 🌏 Adventure 4.0.0</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

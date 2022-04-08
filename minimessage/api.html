@@ -1,0 +1,583 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Platforms" href="../platform/index.html" /><link rel="prev" title="Format" href="format.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>API - Adventure Documentation (v4.10.1)</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  --color-brand-primary: #2f2850;
+  --color-brand-content: #6355aa;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Adventure Documentation (v4.10.1)</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+  
+
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+<span class="sidebar-brand-text">Adventure</span>
+
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-libraries.html">Community Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../audiences.html">Audiences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../text.html">Text (Chat Components)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../serializer/index.html">Text Serializers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/gson.html">Gson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/legacy.html">Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serializer/plain.html">Plain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bossbar.html">Boss Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sound.html">Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title.html">Titles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../book.html">Books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tablist.html">PlayerList/Tablist</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">MiniMessage</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="format.html">Format</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../platform/index.html">Platforms</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/native.html">Native Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/bukkit.html">Bukkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/bungeecord.html">BungeeCord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/spongeapi.html">SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/fabric.html">Fabric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/viaversion.html">ViaVersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../migration/index.html">Migrating to Adventure from other APIs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../migration/bungeecord-chat-api.html">Migrating from the BungeeCord Chat API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/text-3.x.html">Migrating from text 3.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to the Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../version-history/index.html">Version History</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../version-history/adventure.html">adventure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../version-history/adventure-platform.html">adventure-platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../version-history/adventure-platform-fabric.html">adventure-platform-fabric</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The Adventure docs are currently a <strong>work in progress</strong> and supplement the <a class="reference external" href="https://jd.adventure.kyori.net">Javadocs</a>.
+Some areas may have limited coverage or may not be entirely up to date.
+Feel free to join our <a class="reference external" href="https://discord.gg/MMfhJ8F">Discord</a> if you have any questions.</p>
+</div>
+<section id="api">
+<span id="minimessage-api"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<p>Adding the repository</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="63e157df-d1d3-4a37-9d5b-4d993db3b4e0" name="b9c168eb-8c6f-43ba-a250-044847cd54a7" type="radio"/>
+<label class="sd-tab-label" data-sync-id="maven" for="63e157df-d1d3-4a37-9d5b-4d993db3b4e0">
+Maven</label><div class="sd-tab-content docutils">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;repositories&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;repository&gt;</span> <span class="cm">&lt;!-- for development builds --&gt;</span>
+      <span class="nt">&lt;id&gt;</span>sonatype-oss-snapshots1<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://s01.oss.sonatype.org/content/repositories/snapshots/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/repositories&gt;</span>
+</pre></div>
+</div>
+</div>
+<input id="f56e2fda-f094-4986-81fc-fd0fae8dbdd0" name="b9c168eb-8c6f-43ba-a250-044847cd54a7" type="radio"/>
+<label class="sd-tab-label" data-sync-id="gradle-groovy" for="f56e2fda-f094-4986-81fc-fd0fae8dbdd0">
+Gradle (Groovy)</label><div class="sd-tab-content docutils">
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span> <span class="o">{</span>
+   <span class="c1">// for development builds</span>
+   <span class="n">maven</span> <span class="o">{</span>
+       <span class="n">name</span> <span class="o">=</span> <span class="s2">"sonatype-oss-snapshots1"</span>
+       <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://s01.oss.sonatype.org/content/repositories/snapshots/"</span>
+   <span class="o">}</span>
+   <span class="c1">// for releases</span>
+   <span class="n">mavenCentral</span><span class="o">()</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<input id="2a28181a-7844-4b98-9264-b0da32be2c2f" name="b9c168eb-8c6f-43ba-a250-044847cd54a7" type="radio"/>
+<label class="sd-tab-label" data-sync-id="gradle-kotlin" for="2a28181a-7844-4b98-9264-b0da32be2c2f">
+Gradle (Kotlin)</label><div class="sd-tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span> <span class="p">{</span>
+   <span class="c1">// for development builds</span>
+   <span class="n">maven</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="s">"https://s01.oss.sonatype.org/content/repositories/snapshots/"</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">name</span> <span class="o">=</span> <span class="s">"sonatype-oss-snapshots1"</span>
+   <span class="p">}</span>
+   <span class="c1">// for releases</span>
+   <span class="n">mavenCentral</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Declaring the dependency:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="c8140030-85b9-46d5-a21f-d59850d5c2d1" name="b3010f57-e193-4786-afb9-fcd54792d9b5" type="radio"/>
+<label class="sd-tab-label" data-sync-id="maven" for="c8140030-85b9-46d5-a21f-d59850d5c2d1">
+Maven</label><div class="sd-tab-content docutils">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>net.kyori<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>adventure-text-minimessage<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>4.10.1<span class="nt">&lt;/version&gt;</span>
+ <span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+</div>
+<input id="cf9b6696-4d01-4472-bf9f-bf021d3d12ea" name="b3010f57-e193-4786-afb9-fcd54792d9b5" type="radio"/>
+<label class="sd-tab-label" data-sync-id="gradle-groovy" for="cf9b6696-4d01-4472-bf9f-bf021d3d12ea">
+Gradle (Groovy)</label><div class="sd-tab-content docutils">
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span> <span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">implementation</span> <span class="s2">"net.kyori:adventure-text-minimessage:4.10.1"</span>
+ <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<input id="8ee66f41-9387-45ea-91d4-e7093c57ebcb" name="b3010f57-e193-4786-afb9-fcd54792d9b5" type="radio"/>
+<label class="sd-tab-label" data-sync-id="gradle-kotlin" for="8ee66f41-9387-45ea-91d4-e7093c57ebcb">
+Gradle (Kotlin)</label><div class="sd-tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span> <span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">implementation</span><span class="p">(</span><span class="s">"net.kyori:adventure-text-minimessage:4.10.1"</span><span class="p">)</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h2>
+<p>MiniMessage exposes a simple API via the <code class="docutils literal notranslate"><span class="pre">MiniMessage</span></code> class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Previously, a Markdown mode was available. This has been temporarily removed due to some issues
+with the new 4.10.0 parser backend, but there are plans to re-add it once time permits.</p>
+</div>
+<p>A standard instance of the serializer is available through the <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">miniMessage</span></span><span class="p"><span class="pre">()</span></span></code> method. This uses the default set of tags and is not in strict mode.</p>
+<p>Additional customization of MiniMessage is possible via the <a class="reference internal" href="#builder">Builder</a>.</p>
+<p>MiniMessage allows you to both serialize components into MiniMessage strings and to parse/deserialize MiniMessage strings into components.</p>
+<p>Here’s a short example to try things out:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Audience</span> <span class="n">player</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="kd">var</span> <span class="n">mm</span> <span class="o">=</span> <span class="n">MiniMessage</span><span class="p">.</span><span class="na">miniMessage</span><span class="p">();</span>
+
+<span class="n">Component</span> <span class="n">parsed</span> <span class="o">=</span> <span class="n">mm</span><span class="p">.</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"Hello &lt;rainbow&gt;world&lt;/rainbow&gt;, isn't &lt;underlined&gt;MiniMessage&lt;/underlined&gt; fun?"</span><span class="p">);</span>
+
+<span class="n">player</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">parsed</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>For more advanced uses, additional tag resolvers can be registered, which when given a tag name and arguments will produce a <code class="docutils literal notranslate"><span class="pre">Tag</span></code> instance. These are described in more detail below.</p>
+<section id="builder">
+<h3>Builder<a class="headerlink" href="#builder" title="Permalink to this headline">#</a></h3>
+<p>To make customizing MiniMessage easier, we provide a Builder. The specific methods on the builder are explained in the javadoc.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MiniMessage</span> <span class="n">minimessage</span> <span class="o">=</span> <span class="n">MiniMessage</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+    <span class="p">.</span><span class="na">tags</span><span class="p">(</span><span class="n">TagResolver</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+      <span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">StandardTags</span><span class="p">.</span><span class="na">color</span><span class="p">())</span>
+      <span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">StandardTags</span><span class="p">.</span><span class="na">decorations</span><span class="p">())</span>
+      <span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">additionalPlaceholders</span><span class="p">)</span>
+      <span class="p">.</span><span class="na">build</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It’s a good idea to initialize such a MiniMessage instance once, in a central location, and then use it for all your messages.
+Exception being if you want to customize MiniMessage based on permissions of a user (for example, admins should be allowed to use color and decoration in the message, normal users not)</p>
+</div>
+</section>
+<section id="error-handling">
+<h3>Error handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">#</a></h3>
+<p>By default, MiniMessage will never throw an exception caused by user input. Instead, it will treat any invalid tags as normal text. <code class="docutils literal notranslate"><span class="pre">MiniMessage.Builder#strict(true)</span></code> mode will enable strict mode,
+which throws exceptions on unclosed tags, but still will allow any improperly specified tags through.</p>
+<p>To capture information on why a parse may have failed, <code class="docutils literal notranslate"><span class="pre">MiniMessage.Builder#debug(Consumer&lt;String&gt;)</span></code> can be provided, which will accept debug logging for an input string.</p>
+</section>
+</section>
+<section id="tag-resolvers">
+<h2>Tag Resolvers<a class="headerlink" href="#tag-resolvers" title="Permalink to this headline">#</a></h2>
+<p>All tag resolution goes through tag resolvers. There is one global tag resolver, which describes the tags available through a <cite>MiniMessage</cite> instance, plus parse-specific resolvers which can provide additional input-specific tags.</p>
+<p>Tag resolvers are the binding between a name and arguments, and the logic to produce a <code class="docutils literal notranslate"><span class="pre">Component</span></code> contained in a <code class="docutils literal notranslate"><span class="pre">Tag</span></code> instance. They are composable so a <code class="docutils literal notranslate"><span class="pre">TagResolver</span></code> can produce any number of actual <code class="docutils literal notranslate"><span class="pre">Tag</span></code> instances. The tag name passed to resolvers will always be lower-cased, to ensure case-insensitve searches.</p>
+<p>MiniMessage has built-in resolver types that can be used for most use-cases, including custom tags and fixed-value placeholder-style tags. For single-tag resolvers, use the static factory methods in
+<code class="docutils literal notranslate"><span class="pre">TagResolver</span></code> and <code class="docutils literal notranslate"><span class="pre">Placeholder</span></code>. To combine multiple resolvers, take a look at the tag resolver builder, <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">TagResolver</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">builder</span></span><span class="p"><span class="pre">()</span></span></code>.</p>
+<p>Tag names are only allowed to contain the characters a-z, 0-9, <code class="docutils literal notranslate"><span class="pre">_</span></code>, and <code class="docutils literal notranslate"><span class="pre">-</span></code>. They can also optionally start with any of the following characters: <code class="docutils literal notranslate"><span class="pre">!?#</span></code>.</p>
+<p>Placeholder resolvers are especially useful for simple cases:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MiniMessage</span><span class="p">.</span><span class="na">miniMessage</span><span class="p">().</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;gray&gt;Hello &lt;name&gt; :)"</span><span class="p">,</span> <span class="n">Placeholder</span><span class="p">.</span><span class="na">component</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span> <span class="n">Component</span><span class="p">.</span><span class="na">text</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="n">NamedTextColor</span><span class="p">.</span><span class="na">RED</span><span class="p">)));</span> <span class="c1">// return Component.text("Hello ", NamedTextColor.GRAY).append(Component.text("TEST", NamedTextColor.RED), Component.text(" :)"))</span>
+<span class="n">MiniMessage</span><span class="p">.</span><span class="na">miniMessage</span><span class="p">().</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;gray&gt;Hello &lt;name&gt;"</span><span class="p">,</span> <span class="n">Placeholder</span><span class="p">.</span><span class="na">unparsed</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span> <span class="s">"&lt;red&gt;TEST :)"</span><span class="p">));</span> <span class="c1">// returns Component.text("Hello &lt;red&gt;TEST :)", NamedTextColor.GRAY);</span>
+<span class="n">MiniMessage</span><span class="p">.</span><span class="na">miniMessage</span><span class="p">().</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;gray&gt;Hello &lt;name&gt; :)"</span><span class="p">,</span> <span class="n">Placeholder</span><span class="p">.</span><span class="na">parsed</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span> <span class="s">"&lt;red&gt;TEST"</span><span class="p">));</span> <span class="c1">// returns Component.text("Hello ", NamedTextColor.GRAY).append(Component.text("TEST :)", NamedTextColor.RED));</span>
+<span class="n">TagResolver</span> <span class="n">placeholders</span> <span class="o">=</span> <span class="n">TagResolver</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">Placeholder</span><span class="p">.</span><span class="na">parsed</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span> <span class="s">"TEST"</span><span class="p">),</span> <span class="n">Placeholder</span><span class="p">.</span><span class="na">parsed</span><span class="p">(</span><span class="s">"name2"</span><span class="p">,</span> <span class="s">"TEST"</span><span class="p">));</span>
+<span class="n">MiniMessage</span><span class="p">.</span><span class="na">miniMessage</span><span class="p">().</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;gray&gt;Hello &lt;name&gt; and &lt;name2&gt;"</span><span class="p">,</span> <span class="n">placeholders</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where possible, these built-in resolvers should be used, as MiniMessage can flatten combinations of these resolvers into a more efficient format.</p>
+<p>The builder for <code class="docutils literal notranslate"><span class="pre">MiniMessage</span></code> allows providing a custom tag resolver rather than the default (<code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">StandardTags</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">all</span></span><span class="p"><span class="pre">()</span></span></code>), allowing</p>
+<p>MiniMessage also provides convenience methods to do that:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MiniMessage</span> <span class="n">serializer</span> <span class="o">=</span> <span class="n">MiniMessage</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+ <span class="p">.</span><span class="na">tags</span><span class="p">(</span><span class="n">TagResolver</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+   <span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">StandardTags</span><span class="p">.</span><span class="na">color</span><span class="p">())</span>
+   <span class="p">.</span><span class="na">build</span><span class="p">()</span>
+ <span class="p">)</span>
+ <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+ <span class="kd">var</span> <span class="n">parsed</span> <span class="o">=</span> <span class="n">serializer</span><span class="p">.</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;green&gt;&lt;bold&gt;Hai"</span><span class="p">);</span>
+
+ <span class="c1">// Assertion passes</span>
+ <span class="n">assertEquals</span><span class="p">(</span><span class="n">Component</span><span class="p">.</span><span class="na">text</span><span class="p">(</span><span class="s">"&lt;bold&gt;Hai"</span><span class="p">,</span> <span class="n">NamedTextColor</span><span class="p">.</span><span class="na">GREEN</span><span class="p">),</span> <span class="n">parsed</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Because the <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;bold&gt;</span></span></code> tag is not enabled on this builder, the bold tag is interpreted as literal text.</p>
+<section id="handling-arguments">
+<h3>Handling Arguments<a class="headerlink" href="#handling-arguments" title="Permalink to this headline">#</a></h3>
+<p>Tag resolvers have an <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">ArgumentQueue</span></span></code> paremeter, which provides any tag arguments that are present in the input. Helper methods on <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Tag</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">Argument</span></span></code> can assist with conversions of the tag.</p>
+<p>Exceptions thrown by the <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">popOr</span></span><span class="p"><span class="pre">()</span></span></code> methods will interrupt execution, but are not currently exposed to users outside of debug output. We plan to add an auto-completion function that can
+reveal some of this information to the user, so please do try to write useful error messaces in custom tag resolvers.</p>
+</section>
+</section>
+<section id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">#</a></h2>
+<p>Once a tag resolver has handled arguments, it returns a <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Tag</span></span></code> object. These objects implement the logic of producing or modifying a component tree. There are three main kinds of <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Tag</span></span></code> – all custom implementations must implement one of these interfaces.</p>
+<section id="pre-process">
+<h3>Pre-process<a class="headerlink" href="#pre-process" title="Permalink to this headline">#</a></h3>
+<p>These tags implement the <code class="docutils literal notranslate"><span class="pre">PreProcess</span></code> interface, and have a value of a raw MiniMessage string that is replaced into the user input before parsing continues.</p>
+<p>Due to limitations in the current parser implementation, note that pre-process tags will adjust offsets in error messages, and may inhibit tab completion. However, they are currently the only way to integrate markup fragments into a message.</p>
+</section>
+<section id="inserting">
+<h3>Inserting<a class="headerlink" href="#inserting" title="Permalink to this headline">#</a></h3>
+<p>These tags are fairly straightforward: they represent a literal <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Component</span></span></code>. The vast majority of Tag implementations will want
+to be <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Inserting</span></span></code> tags. <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Inserting</span></span></code> tags may also optionally be self-closing – by default, this is only true for tags created by <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Placeholder</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">unparsed</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">String</span></span><span class="p"><span class="pre">)</span></span></code> and <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Placeholder</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">component</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">Component</span></span><span class="p"><span class="pre">)</span></span></code>,
+so that placeholders are self-contained.</p>
+<p>Most <a class="reference internal" href="format.html"><span class="doc">standard tags</span></a> are <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Inserting</span></span></code>. These tags will either directly insert a component, or use the helper <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Tag</span></span><span class="p"><span class="pre">.</span></span><span class="na"><span class="pre">styling</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">StyleBuilderApplicable</span></span><span class="p"><span class="pre">...)</span></span></code> to apply style to components.</p>
+<p>This helper can be used to efficiently apply a collection of styles with one tag. For example, to create a <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;a:</span></span><span class="na"><span class="pre">[href]</span></span><span class="nt"><span class="pre">&gt;</span></span><span class="l"><span class="pre">Title</span></span><span class="nt"><span class="pre">&lt;/a&gt;</span></span></code> tag, that makes the <code class="docutils literal notranslate"><span class="pre">Title</span></code> text into a link that opens a URL with traditional link styling, this could be used:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Component</span> <span class="nf">aTagExample</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="n">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">"Hello, &lt;a:https://kyori.net&gt;click me!&lt;/a&gt; but not me!"</span><span class="p">;</span>
+  <span class="kd">final</span> <span class="n">MiniMessage</span> <span class="n">extendedInstance</span> <span class="o">=</span> <span class="n">MiniMessage</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+    <span class="p">.</span><span class="na">tags</span><span class="p">(</span><span class="n">b</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">TagResolver</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="n">MiniMessageTest</span><span class="p">::</span><span class="n">createA</span><span class="p">)))</span>
+    <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="n">extendedInstance</span><span class="p">.</span><span class="na">deserialize</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">static</span> <span class="n">Tag</span> <span class="nf">createA</span><span class="p">(</span><span class="kd">final</span> <span class="n">ArgumentQueue</span> <span class="n">args</span><span class="p">,</span> <span class="kd">final</span> <span class="n">Context</span> <span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="n">String</span> <span class="n">link</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="na">popOr</span><span class="p">(</span><span class="s">"The &lt;a&gt; tag requires exactly one argument, the link to open"</span><span class="p">).</span><span class="na">value</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="n">Tag</span><span class="p">.</span><span class="na">styling</span><span class="p">(</span>
+    <span class="n">NamedTextColor</span><span class="p">.</span><span class="na">BLUE</span><span class="p">,</span>
+    <span class="n">TextDecoration</span><span class="p">.</span><span class="na">UNDERLINED</span><span class="p">,</span>
+    <span class="n">ClickEvent</span><span class="p">.</span><span class="na">openUrl</span><span class="p">(</span><span class="n">link</span><span class="p">),</span>
+    <span class="n">HoverEvent</span><span class="p">.</span><span class="na">showText</span><span class="p">(</span><span class="n">Component</span><span class="p">.</span><span class="na">text</span><span class="p">(</span><span class="s">"Open "</span> <span class="o">+</span> <span class="n">link</span><span class="p">))</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This allows producing rich styling relatively quickly.</p>
+</section>
+<section id="modifying">
+<h3>Modifying<a class="headerlink" href="#modifying" title="Permalink to this headline">#</a></h3>
+<p>Modifying tags are the most complex, and most specialized of the tag types available. These tags receive the node tree and have an opportunity to analyze it before
+components are constructed, and then receive every produced child component and can modify those children. This is used for the built-in <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;rainbow&gt;</span></span></code> and <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;gradient&gt;</span></span></code> tags,
+but can be applied for similar complex transformations.</p>
+<p>Modifying tags are first given an opportunity to visit every node of the tree in a depth-first traversal. If a <code class="docutils literal notranslate"><span class="pre">Modifying</span></code> instance stores any state during this traversal, its resolver should return a new instance every time to prevent state corruption.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">Node</span></span></code> API in 4.10.0 is currently not very well developed – most aspects are still internal. Additional information can be exposed as needed by tag developers.</p>
+</div>
+<p>Once the whole parse tree has been visited, the <code class="code highlight java docutils literal notranslate"><span class="n"><span class="pre">postVisit</span></span><span class="p"><span class="pre">()</span></span></code> method is called. This method can optionally be overridden if any additional calculations must be performed.</p>
+<p>Next, the <code class="docutils literal notranslate"><span class="pre">Modifying</span></code> instance enters the application phase, where the component tree is presented to the tag for transformation. This allows the tag to <em>modify</em> the contents of these components, giving it its name.</p>
+</section>
+<section id="parser-directives">
+<h3>Parser Directives<a class="headerlink" href="#parser-directives" title="Permalink to this headline">#</a></h3>
+<p>Parser directives are a special kind of tag, as they are instructions for the parser, and therefore cannot be implemented by end users.</p>
+<p>There is currently only one, but more may be added at any time.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">RESET</span></code></dt><dd><p>This indicates to the parser that this tag should close all currently open tags.</p>
+</dd>
+</dl>
+<p>This can be used to provide the functionality of a <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;reset&gt;</span></span></code> tag under a different name. For example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">final</span> <span class="kd">var</span> <span class="n">clearTag</span> <span class="o">=</span> <span class="n">TagResolver</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="s">"clear"</span><span class="p">,</span> <span class="n">ParserDirective</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span>
+
+<span class="kd">final</span> <span class="kd">var</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">MiniMessage</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+  <span class="p">.</span><span class="na">editTags</span><span class="p">(</span><span class="n">t</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="n">clearTag</span><span class="p">))</span>
+  <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="kd">final</span> <span class="n">Component</span> <span class="n">parsed</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="na">deserialize</span><span class="p">(</span><span class="s">"&lt;red&gt;hello &lt;bold&gt;world&lt;clear&gt;, how are you?"</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>would add a <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;clear&gt;</span></span></code> tag, behaving identically to the <code class="code highlight minimessage docutils literal notranslate"><span class="nt"><span class="pre">&lt;reset&gt;</span></span></code> tag available by default – “, how are you?” would not be bold or colored red.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../platform/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Platforms</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="format.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Format</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2021, KyoriPowered
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">API</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li><a class="reference internal" href="#builder">Builder</a></li>
+<li><a class="reference internal" href="#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tag-resolvers">Tag Resolvers</a><ul>
+<li><a class="reference internal" href="#handling-arguments">Handling Arguments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tags">Tags</a><ul>
+<li><a class="reference internal" href="#pre-process">Pre-process</a></li>
+<li><a class="reference internal" href="#inserting">Inserting</a></li>
+<li><a class="reference internal" href="#modifying">Modifying</a></li>
+<li><a class="reference internal" href="#parser-directives">Parser Directives</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>
